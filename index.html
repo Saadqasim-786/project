@@ -1,0 +1,667 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETBot Industries</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+ #intro {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 30%, #12394a, #06141c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Soft light circles */
+#intro::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 200, 255, 0.12);
+    filter: blur(120px);
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+}
+
+#intro::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 255, 180, 0.1);
+    filter: blur(100px);
+    border-radius: 50%;
+    bottom: 10%;
+    right: 20%;
+}
+
+/* Center box */
+.intro-box {
+    animation: zoomFade 1.2s ease;
+}
+
+@keyframes zoomFade {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.logo-badge {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 28px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.05)
+    );
+
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,0.4),
+        inset 0 -2px 6px rgba(0,0,0,0.2),
+        0 20px 50px rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    position: relative;
+    overflow: hidden;
+
+  
+    transform: perspective(800px) rotateX(0deg);
+    
+
+    animation: tiltIn 1.2s ease;
+    
+}
+/* @keyframes tiltIn {
+    from {
+        opacity: 0;
+        transform: perspective(800px) rotateX(20deg) translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: perspective(800px) rotateX(0deg) translateY(0);
+    }
+} */
+.logo-badge::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255,255,255,0.6),
+        transparent 70%
+    );
+    transform: rotate(25deg) translateX(-100%);
+    animation: shineMove 3s infinite;
+}
+
+@keyframes shineMove {
+    0% { transform: rotate(25deg) translateX(-100%); }
+    100% { transform: rotate(25deg) translateX(100%); }
+}
+
+.intro-logo {
+    width: 300px;
+    transition: transform 0.5s ease;
+}
+
+
+.logo-badge:hover .intro-logo {
+    transform: scale(1.1);
+}
+
+
+.intro-tag {
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+.intro-box,
+.intro-text,
+.intro-tag {
+    color: #ffffff !important;
+}
+
+.intro-text {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+.intro-tag {
+    color: rgba(255,255,255,0.75) !important;
+}
+
+/* Main title */
+.intro-text {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Cursor */
+.cursor {
+    animation: blink 0.8s infinite;
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Exit */
+.hide-intro {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: 0.8s ease;
+}
+
+        .section-title-strip {
+            background-color: darkgreen;
+            color: #fff;
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+          padding: 8px;
+         margin-bottom: 10px;
+          border-radius: 8px;
+          
+           
+        }
+
+        @media (max-width: 767.98px) {
+            .site-intro__content {
+                padding: 34px 18px 42px;
+            }
+
+            .site-intro__panel {
+                width: min(360px, 82vw);
+                border-radius: 42px;
+                margin-bottom: 30px;
+            }
+
+            .site-intro__tagline {
+                letter-spacing: 0.22rem;
+                margin-bottom: 18px;
+            }
+
+            .section-title-strip {
+                font-size: 2.2rem;
+                padding: 28px 16px;
+            }
+        }
+
+        .home-products-intro {
+            text-align: center;
+            color: #1f3561;
+            margin-top: -6px;
+            margin-bottom: 44px;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .home-product-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+       .home-product-card {
+    background: #f1f3f4;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 100, 0, 0.2); 
+    padding: 42px 34px;
+    min-height: 300px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+}
+
+.home-product-card:hover {
+    transform: translateY(-12px) scale(1.02); 
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid darkgreen; 
+}
+
+        .home-product-icon {
+            font-size: 72px;
+            margin-bottom: 26px;
+            display: inline-block;
+        }
+
+        .home-product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1f3561;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 767.98px) {
+            .home-products-intro {
+                font-size: 1.2rem;
+                margin-bottom: 24px;
+            }
+
+            .home-product-card {
+                min-height: 230px;
+                padding: 30px 22px;
+            }
+
+            .home-product-icon {
+                font-size: 58px;
+            }
+        }
+       
+    </style>
+</head>
+
+<body >
+ <div id="intro">
+    <div class="intro-box">
+
+      
+        <div class="logo-badge">
+            <img src="./website_logo-removebg-preview.png" class="intro-logo" alt="Logo">
+        </div>
+
+       
+        <p class="intro-tag">PREMIUM PET PACKAGING</p>
+
+
+        <h1 class="intro-text">
+            <span id="typing"></span><span class="cursor">|</span>
+        </h1>
+
+    </div>
+</div>
+<header>
+        <div class="logo-text">
+            <img loading="eager" decoding="async" fetchpriority="high" src="./website_logo-removebg-preview.png" alt="web-logo">
+
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-details.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">More</a>
+                    <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                        <li><a class="dropdown-item" href="manufacturing.html">Manufacturing</a></li>
+                        <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                        <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                        <li><a class="dropdown-item" href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                        <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                        <li><a class="dropdown-item" href="news.html">News</a></li>
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        <li><a class="dropdown-item" href="csr.html">CSR</a></li>
+                        <li><a class="dropdown-item" href="quote.html">Request Quote</a></li>
+                        <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="register.html">Register</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+   
+<section class="hero-section d-flex align-items-center text-center text-lg-start">
+  <div class="container">
+    <div class="row align-items-center">
+      
+
+      <div class="col-lg-6">
+        <h1 class="hero-title">
+          High Quality PET Packaging Solutions
+        </h1>
+
+        <p class="hero-subtitle">
+          We manufacture durable, customizable and eco-friendly PET bottles for multiple industries.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="products.html" class="btn btn-success me-3">View Products</a>
+          <a href="contact-details.html" class="btn btn-outline-light">Contact Us</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+   
+
+    <section id="home-products" class="container-fluid  my-5">
+        <h2 class="section-title-strip " >Our Products</h2>
+        <p class="home-products-intro">Here is a list of products we manufacture.</p>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <a href="products.html" class="home-product-link" aria-label="View Edible Oil Bottles">
+                    <div class="home-product-card">
+                        <i class="fa-solid fa-bottle-water home-product-icon" style="color: #f3a300;"></i>
+                        <h3 class="home-product-title">Edible Oil Bottles</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <a href="products.html" class="home-product-link" aria-label="View Jars">
+                    <div class="home-product-card">
+                        <i class="fa-solid fa-jar home-product-icon" style="color: #1c8b3f;"></i>
+                        <h3 class="home-product-title">Jars</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <a href="products.html" class="home-product-link" aria-label="View Lubricant Oil Containers">
+                    <div class="home-product-card">
+                        <i class="fa-solid fa-oil-can home-product-icon" style="color: #0b853c;"></i>
+                        <h3 class="home-product-title">Lubricant Oil Containers</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <a href="products.html" class="home-product-link" aria-label="View Pharmaceutical Bottles">
+                    <div class="home-product-card">
+                        <i class="fa-solid fa-pump-medical home-product-icon" style="color: #087337;"></i>
+                        <h3 class="home-product-title">Pharmaceutical Bottles</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+<section class="container-fluid my-5">
+         <h2 class="section-title-strip " >Customer Testimonials</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="card-text">"PETBot Industries provides excellent quality bottles at competitive prices. Highly recommended!"</p>
+                        <p><strong>- Ahmed Khan, Beverage Company</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="card-text">"Great customer service and reliable delivery. Our business has grown significantly with their support."</p>
+                        <p><strong>- Fatima Ali, Cosmetics Brand</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star-half-alt" style="color: gold;"></i>
+                        </div>
+                        <p class="card-text">"Eco-friendly bottles, excellent quality, and very responsive team. Perfect for our sustainable goals."</p>
+                        <p><strong>- Hassan Raza, Water Bottling Plant</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="card-text">"Customization options are amazing. They delivered exactly what we needed without any compromise."</p>
+                        <p><strong>- Zara Malik, Chemical Company</strong></p>
+                    </div>
+                </div>
+            </div>
+           
+           
+           
+        </div>
+    </section>
+    <section id="home-testimonials" class="container-fluid my-5">
+        <h2 class="section-title-strip">Client Review</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card " >
+                    <div class="card-body">
+                         <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="mb-3">"PETBot delivered exactly the bottle design we needed for our new beverage
+                            line. Quality and finishing were excellent."</p>
+                        <h6 class="mb-0" style="color: darkgreen;">Ali Raza</h6>
+                        <small class="text-muted">Operations Manager, FreshSip</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card " >
+                    <div class="card-body">
+                         <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="mb-3">"Very professional team and on-time delivery for our bulk order. Their support
+                            made the full process smooth."</p>
+                        <h6 class="mb-0" style="color: darkgreen;">Sara Khan</h6>
+                        <small class="text-muted">Procurement Lead, PureDrop</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card " >
+                    <div class="card-body">
+                         <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="mb-3">"We switched to PETBot for cosmetic packaging and immediately saw better
+                            consistency and stronger bottle durability."</p>
+                        <h6 class="mb-0" style="color: darkgreen;">Hamza Iqbal</h6>
+                        <small class="text-muted">Brand Owner, GlowCare</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card " >
+                    <div class="card-body">
+                         <div class="mb-3">
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </div>
+                        <p class="mb-3">"Affordable pricing, reliable quality, and clear communication. PETBot is now
+                            our first choice for PET containers."</p>
+                        <h6 class="mb-0" style="color: darkgreen;">Mariam Zahid</h6>
+                        <small class="text-muted">Director, PakChem Supplies</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #82dba7;"><i class="fas fa-info-circle"></i> About Us</h5>
+                    <p>PETBot Industries is a leading manufacturer of high-quality PET bottles and sustainable packaging
+                        solutions.</p>
+                    <div class="mt-3">
+                        <p><a href="tel:+921234567890" class="text-white text-decoration-none"><i class="fas fa-phone" style="color: #82dba7;"></i> +92 123 456 7890</a></p>
+                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@petbotindustries.com" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" style="color: #82dba7;"></i> info@petbotindustries.com</a></p>
+                        <p><a href="https://www.google.com/maps/search/?api=1&query=123+Industrial+Area,+City" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" style="color: #82dba7;"></i> 123 Industrial Area, City</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #82dba7;"><i class="fas fa-link"></i> Quick Links</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> Home</a></li>
+                        <li><a href="about.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> About</a></li>
+                        <li><a href="products.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> Products</a></li>
+                        <li><a href="services.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> Services</a></li>
+                        <li><a href="gallery.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> Gallery</a></li>
+                        <li><a href="blog.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> Blog</a></li>
+                        <li><a href="contact-details.html" class="text-white"><i class="fas fa-chevron-right"
+                                    style="color: #82dba7;"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #82dba7;"><i class="fas fa-share-alt"></i> Follow Us</h5>
+                    <div class="mb-3">
+                        <a href="https://www.facebook.com/" class="text-white me-3" title="Facebook" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-facebook fa-lg" style="color: #82dba7;"></i></a>
+                        <a href="https://x.com/" class="text-white me-3" title="Twitter" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-twitter fa-lg" style="color: #82dba7;"></i></a>
+                        <a href="https://www.linkedin.com/" class="text-white me-3" title="LinkedIn" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg" style="color: #82dba7;"></i></a>
+                        <a href="https://www.instagram.com/" class="text-white me-3" title="Instagram" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram fa-lg" style="color: #82dba7;"></i></a>
+                        <a href="https://www.youtube.com/" class="text-white" title="YouTube" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-youtube fa-lg" style="color: #82dba7;"></i></a>
+                    </div>
+                    <p><strong>Certifications:</strong></p>
+                    <p><i class="fas fa-certificate" style="color: #82dba7;"></i> ISO 9001 | ISO 14001 | FDA Approved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const text = "PETBot Industries";
+    let i = 0;
+
+    const typing = document.getElementById("typing");
+    const intro = document.getElementById("intro");
+
+    function typeEffect() {
+        if (i < text.length) {
+            typing.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, 70);
+        } else {
+            setTimeout(() => {
+                intro.classList.add("hide-intro");
+
+                setTimeout(() => {
+                    intro.style.display = "none";
+                }, 800);
+
+            }, 1200);
+        }
+    }
+
+    setTimeout(typeEffect, 400);
+});
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+

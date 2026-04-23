@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detail - PETBot Industries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #e8f7ee, #d7eefe);
+            border-radius: 24px;
+            padding: 28px;
+            margin: 40px 0 24px;
+        }
+
+        .blog-hero img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 16px 40px rgba(20, 93, 160, 0.14);
+        }
+
+        .blog-meta {
+            color: #5b6f63;
+            font-size: 0.95rem;
+        }
+
+        .blog-article {
+            background: #ffffff;
+            border: 1px solid #dcefe4;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-article h3 {
+            color: #145DA0;
+            margin-top: 24px;
+        }
+
+        .blog-article p {
+            color: #33443b;
+            line-height: 1.8;
+        }
+
+        .back-link {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 767.98px) {
+            .blog-hero {
+                padding: 18px;
+            }
+
+            .blog-hero img {
+                height: 230px;
+            }
+
+            .blog-article {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-text">
+            <img loading="eager" decoding="async" fetchpriority="high" src="./website_logo-removebg-preview.png" alt="web-logo">
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-details.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+                    <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                        <li><a class="dropdown-item" href="manufacturing.html">Manufacturing</a></li>
+                        <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                        <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                        <li><a class="dropdown-item" href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                        <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                        <li><a class="dropdown-item" href="news.html">News</a></li>
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        <li><a class="dropdown-item" href="csr.html">CSR</a></li>
+                        <li><a class="dropdown-item" href="quote.html">Request Quote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <a class="back-link text-success" href="blog.html"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+        <section class="blog-hero">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <p class="blog-meta mb-2" id="postCategory"></p>
+                    <h1 class="mb-3" id="postTitle">Loading...</h1>
+                    <p class="lead mb-3" id="postSummary"></p>
+                    <p class="blog-meta mb-0">PETBot Industries Blog</p>
+                </div>
+                <div class="col-lg-6">
+                    <img loading="lazy" decoding="async" id="postImage" src="" alt="Blog detail image">
+                </div>
+            </div>
+        </section>
+        <section class="blog-article" id="postContent"></section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #82dba7;"><i class="fas fa-info-circle"></i> About Us</h5>
+                    <p>PETBot Industries is a leading manufacturer of high-quality PET bottles and sustainable packaging solutions.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #82dba7;"><i class="fas fa-link"></i> Quick Links</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="gallery.html" class="text-white">Gallery</a></li>
+                        <li><a href="blog.html" class="text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #82dba7;"><i class="fas fa-share-alt"></i> Follow Us</h5>
+                    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@petbotindustries.com" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" style="color: #82dba7;"></i> info@petbotindustries.com</a></p>
+                    <p><a href="tel:+921234567890" class="text-white text-decoration-none"><i class="fas fa-phone" style="color: #82dba7;"></i> +92 123 456 7890</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(function () {
+            var $dropdownToggle = $('.dropdown-toggle');
+            var $dropdownMenu = $('.dropdown-menu');
+            var $dropdownContainer = $('.dropdown');
+
+            if ($dropdownToggle.length && $dropdownMenu.length) {
+                $dropdownToggle.on('click', function (e) {
+                    e.preventDefault();
+                    $dropdownMenu.toggleClass('active');
+                });
+
+                $dropdownContainer.on('mouseenter', function () {
+                    $dropdownMenu.addClass('active');
+                }).on('mouseleave', function () {
+                    $dropdownMenu.removeClass('active');
+                });
+
+                $(document).on('click', function (e) {
+                    if (!$(e.target).closest('.dropdown').length) {
+                        $dropdownMenu.removeClass('active');
+                    }
+                });
+
+                $dropdownMenu.find('li a').on('click', function () {
+                    $dropdownMenu.removeClass('active');
+                });
+            }
+
+            var posts = {
+                "future-pet-bottles": {
+                    title: "The Future of PET Bottles",
+                    category: "Manufacturing Innovation",
+                    summary: "PET bottle industry faster, lighter aur smarter packaging ki taraf move kar rahi hai.",
+                    image: "./Pet Bottles IMG2/jars.jpg",
+                    content: "<p>PET bottles aaj bhi beverage, food aur household packaging ka major part hain, lekin market ab sirf low-cost packaging par focus nahi kar raha. Manufacturers lightweight structure, better barrier protection, aur recyclable design par kaam kar rahe hain.</p><h3>Why It Matters</h3><p>Modern production lines precision molding aur efficient resin usage se bottle strength maintain karti hain jab ke material kam use hota hai. PETBot Industries isi balance par focus karta hai taake quality bhi strong rahe aur sustainability bhi improve ho.</p>"
+                },
+                "custom-bottle-designs": {
+                    title: "Custom Bottle Designs",
+                    category: "Brand Packaging",
+                    summary: "Customized bottle design branding aur usability dono ko improve karta hai.",
+                    image: "./Pet Bottles IMG2/preform.jpg",
+                    content: "<p>Custom bottle development tab successful hota hai jab client ki product category, filling line, target audience, aur transport needs ko ek design process mein combine kiya jaye. Har industry ke liye packaging expectations alag hoti hain.</p><h3>Design Process</h3><p>Shape, cap fitting, label area, shelf impact aur handling comfort sab cheezen ek saath evaluate ki jati hain. PETBot Industries aise designs banata hai jo practical bhi hon aur visually strong bhi.</p>"
+                },
+                "sustainability-packaging": {
+                    title: "Sustainability in Packaging",
+                    category: "Eco-Friendly Solutions",
+                    summary: "Sustainable packaging behtar performance ke saath kam environmental impact ka target rakhti hai.",
+                    image: "./Pet Bottles IMG2/jar2.jpg",
+                    content: "<p>Packaging sustainability ka matlab sirf recyclable material use karna nahi hota. Is mein energy-conscious production, material reduction, aur logistics efficiency bhi shamil hain. PET material lightweight hone ki wajah se is mission mein helpful hota hai.</p><h3>Practical Improvements</h3><p>Wall thickness optimization, better transport planning aur responsible material choices se noticeable impact create hota hai. PETBot Industries sustainability ko real production decisions ke saath connect karta hai.</p>"
+                },
+                "industry-trends": {
+                    title: "Industry Trends",
+                    category: "Market Insights",
+                    summary: "PET bottle manufacturing mein customer demand aur technology dono rapidly change ho rahe hain.",
+                    image: "./Pet Bottles IMG2/jars.jpg",
+                    content: "<p>Market ab attractive packaging, consistent quality aur faster delivery tino expect karta hai. Is wajah se manufacturers automation, mold optimization aur flexible production par zyada focus kar rahe hain.</p><h3>Current Direction</h3><p>Lightweight bottles, tamper-evident closures aur smart packaging ideas zyada common ho rahe hain. Companies jo trends ko jaldi adopt karti hain, unke liye new growth opportunities create hoti hain.</p>"
+                },
+                "recycling-innovations": {
+                    title: "Recycling Innovations",
+                    category: "Circular Economy",
+                    summary: "Advanced recycling methods PET packaging ko waste se resource mein convert kar rahe hain.",
+                    image: "./Pet Bottles IMG2/juices.jpg",
+                    content: "<p>Recycling ecosystem tab effective hota hai jab collection, sorting, washing aur reprocessing ka chain properly managed ho. PET is process ke liye strong option hai kyun ke iski recovery systems industry mein already established hain.</p><h3>Innovation Areas</h3><p>Modern recycling plants optical sorting aur contamination control systems use karte hain jisse output quality improve hoti hai. Yeh circular packaging economy ko support karta hai.</p>"
+                },
+                "quality-control-standards": {
+                    title: "Quality Control Standards",
+                    category: "Testing and Reliability",
+                    summary: "Strong quality control har bottle ki reliability aur consistency ko maintain karta hai.",
+                    image: "./Pet Bottles IMG2/oil cans.jpg",
+                    content: "<p>Quality sirf final inspection ka result nahi hoti. Raw material selection, machine calibration, process monitoring aur routine testing sab is ka part hote hain. PET packaging mein dimensions, sealing aur strength bohat important hote hain.</p><h3>Checks That Matter</h3><p>Visual inspection, drop testing, cap fit checks aur weight monitoring product consistency ko better banate hain. PETBot Industries strict quality systems follow karta hai taake har batch dependable ho.</p>"
+                },
+                "material-science-advances": {
+                    title: "Material Science Advances",
+                    category: "R&D and Performance",
+                    summary: "New materials aur resin improvements better packaging performance ka raasta khol rahe hain.",
+                    image: "./Pet Bottles IMG2/lab.jpg",
+                    content: "<p>Material science ne PET packaging ko kaafi improve kiya hai. Better clarity, stronger structure aur improved barrier traits ki wajah se modern bottles pehle se zyada efficient ho chuki hain.</p><h3>Benefits for Manufacturers</h3><p>Jab material predictable aur high-performance ho to molding quality stable rehti hai, reject rate kam hota hai aur transportation reliability improve hoti hai.</p>"
+                },
+                "global-market-trends": {
+                    title: "Global Market Trends",
+                    category: "Business Outlook",
+                    summary: "Global PET market regional demand aur packaging habits ke hisaab se reshape ho raha hai.",
+                    image: "./Pet Bottles IMG2/water.jpg",
+                    content: "<p>Different regions mein PET bottle demand beverage growth, FMCG expansion aur logistics trends se drive hoti hai. Isi liye market analysis manufacturers ko future investment direction samajhne mein help karti hai.</p><h3>Where Growth Is Coming From</h3><p>Bottled water demand, convenience packaging aur personal care products market expansion ko support kar rahe hain. Jo companies apni product range ko in signals ke saath align karti hain unko zyada faida hota hai.</p>"
+                }
+            };
+
+            var postKey = new URLSearchParams(window.location.search).get('post');
+            var post = posts[postKey] || posts["future-pet-bottles"];
+
+            $('#postCategory').text(post.category);
+            $('#postTitle').text(post.title);
+            $('#postSummary').text(post.summary);
+            $('#postImage').attr('src', post.image).attr('alt', post.title);
+            $('#postContent').html(post.content);
+            document.title = post.title + ' - PETBot Industries';
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

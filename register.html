@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - PETBot Industries</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-text">
+            <img loading="eager" decoding="async" fetchpriority="high" src="./website_logo-removebg-preview.png" alt="web-logo">
+        </div>
+                <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-details.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li><li><a href="register.html">Register</a></li><li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+                    <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                        <li><a class="dropdown-item" href="manufacturing.html">Manufacturing</a></li>
+                        <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                        <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                        <li><a class="dropdown-item" href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                        <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                        <li><a class="dropdown-item" href="news.html">News</a></li>
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        <li><a class="dropdown-item" href="csr.html">CSR</a></li>
+                        <li><a class="dropdown-item" href="quote.html">Request Quote</a></li>
+                        <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="register.html">Register</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card" style="box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: none; border-radius: 10px;">
+                    <div class="card-header text-center" style="background: linear-gradient(135deg, darkgreen, #82dba7); color: white; border-radius: 10px 10px 0 0;">
+                        <h4><i class="fas fa-user-plus"></i> Create Your Account</h4>
+                        <p class="mb-0">Join PETBot Industries today for premium services.</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company" placeholder="Enter your company name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label" for="terms">I agree to the <a href="terms.html" style="color: darkgreen;">Terms & Conditions</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" style="background-color: darkgreen; border-color: darkgreen;">Register</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <p>Already have an account? <a href="login.html" style="color: darkgreen;">Login here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-4 mb-4">
+                <h5 style="color: #82dba7;"><i class="fas fa-info-circle"></i> About Us</h5>
+                <p>PETBot Industries is a leading manufacturer of high-quality PET bottles and sustainable packaging solutions.</p>
+                <div class="mt-3">
+                    <p><a href="tel:+921234567890" class="text-white text-decoration-none"><i class="fas fa-phone" style="color: #82dba7;"></i> +92 123 456 7890</a></p>
+                    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@petbotindustries.com" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" style="color: #82dba7;"></i> info@petbotindustries.com</a></p>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=123+Industrial+Area,+City" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" style="color: #82dba7;"></i> 123 Industrial Area, City</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 style="color: #82dba7;"><i class="fas fa-link"></i> Quick Links</h5>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="index.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> Home</a></li>
+                    <li><a href="about.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> About</a></li>
+                    <li><a href="products.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> Products</a></li>
+                    <li><a href="services.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> Services</a></li>
+                    <li><a href="gallery.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> Gallery</a></li>
+                    <li><a href="blog.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> Blog</a></li>
+                    <li><a href="contact-details.html" class="text-white"><i class="fas fa-chevron-right" style="color: #82dba7;"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 style="color: #82dba7;"><i class="fas fa-share-alt"></i> Follow Us</h5>
+                <div class="mb-3">
+                    <a href="https://www.facebook.com/" class="text-white me-3" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-lg" style="color: #82dba7;"></i></a>
+                    <a href="https://x.com/" class="text-white me-3" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-lg" style="color: #82dba7;"></i></a>
+                    <a href="https://www.linkedin.com/" class="text-white me-3" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg" style="color: #82dba7;"></i></a>
+                    <a href="https://www.instagram.com/" class="text-white me-3" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-lg" style="color: #82dba7;"></i></a>
+                    <a href="https://www.youtube.com/" class="text-white" title="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-lg" style="color: #82dba7;"></i></a>
+                </div>
+                <p><strong>Certifications:</strong></p>
+                <p><i class="fas fa-certificate" style="color: #82dba7;"></i> ISO 9001 | ISO 14001 | FDA Approved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(function () {
+    var $form = $('form');
+    var $firstNameInput = $('#firstName');
+    var $lastNameInput = $('#lastName');
+    var $emailInput = $('#email');
+    var $phoneInput = $('#phone');
+    var $passwordInput = $('#password');
+    var $confirmPasswordInput = $('#confirmPassword');
+    var $termsInput = $('#terms');
+    var $submitBtn = $form.find('button[type="submit"]');
+
+    function showError($input, message) {
+        $input.addClass('is-invalid');
+
+        if (!$input.next('.invalid-feedback').length) {
+            $input.after('<div class="invalid-feedback">' + message + '</div>');
+        } else {
+            $input.next('.invalid-feedback').text(message);
+        }
+    }
+
+    function clearError($input) {
+        $input.removeClass('is-invalid');
+        $input.next('.invalid-feedback').remove();
+    }
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function isValidPhone(phone) {
+        return /^\+?[\d\s\-\(\)]{10,}$/.test(phone);
+    }
+
+    // 🔥 REAL-TIME PASSWORD MATCH
+    function checkPasswords() {
+        var pass = $.trim($passwordInput.val());
+        var confirm = $.trim($confirmPasswordInput.val());
+
+        if (confirm.length > 0 && pass !== confirm) {
+            showError($confirmPasswordInput, 'Passwords do not match');
+        } else {
+            clearError($confirmPasswordInput);
+        }
+    }
+
+    $passwordInput.on('input', checkPasswords);
+    $confirmPasswordInput.on('input', checkPasswords);
+
+    // ✅ FORM SUBMIT
+    $form.on('submit', function (e) {
+        e.preventDefault();
+
+        var isValid = true;
+
+        var password = $.trim($passwordInput.val());
+        var confirmPassword = $.trim($confirmPasswordInput.val());
+
+        // First name
+        if ($.trim($firstNameInput.val()).length < 4) {
+            showError($firstNameInput, 'First name must be at least 4 characters');
+            isValid = false;
+        } else clearError($firstNameInput);
+
+        // Last name
+        if ($.trim($lastNameInput.val()).length < 4) {
+            showError($lastNameInput, 'Last name must be at least 4 characters');
+            isValid = false;
+        } else clearError($lastNameInput);
+
+        // Email
+        if (!isValidEmail($.trim($emailInput.val()))) {
+            showError($emailInput, 'Enter valid email');
+            isValid = false;
+        } else clearError($emailInput);
+
+        // Phone
+        if ($.trim($phoneInput.val()) && !isValidPhone($.trim($phoneInput.val()))) {
+            showError($phoneInput, 'Enter valid phone number');
+            isValid = false;
+        } else clearError($phoneInput);
+
+        // Password
+        if (password.length < 8) {
+            showError($passwordInput, 'Password must be at least 8 characters');
+            isValid = false;
+        } else clearError($passwordInput);
+
+        // Confirm Password
+        if (confirmPassword === '') {
+            showError($confirmPasswordInput, 'Please confirm your password');
+            isValid = false;
+        } else if (password !== confirmPassword) {
+            showError($confirmPasswordInput, 'Passwords do not match');
+            isValid = false;
+        } else clearError($confirmPasswordInput);
+
+        // Terms
+        if (!$termsInput.is(':checked')) {
+            alert('Please accept Terms & Conditions');
+            isValid = false;
+        }
+
+        // ✅ SUCCESS
+        if (isValid) {
+            $submitBtn.prop('disabled', true)
+                      .html('<i class="fas fa-spinner fa-spin"></i> Creating...');
+
+            setTimeout(function () {
+                alert('Registration has been successful! 🎉');
+
+                $form[0].reset();
+
+                $submitBtn.prop('disabled', false).html('Register');
+            }, 1500);
+        }
+    });
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
